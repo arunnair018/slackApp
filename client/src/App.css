@@ -1,0 +1,148 @@
+html,
+body,
+#root,
+.App,
+.home,
+.row,
+.modal {
+  height: 100%;
+  max-width: 100%;
+}
+
+.nonav {
+  height: 750px;
+}
+.msg {
+  height: 600px;
+  overflow-y: auto;
+}
+
+.brand-logo {
+  margin-left: 5%;
+}
+.logout {
+  margin-right: 5%;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.header-channel {
+  margin-top: 5%;
+}
+.channel-list {
+  width: 100%;
+  margin-top: 5%;
+}
+.channel-button {
+  margin: 1% 0%;
+  width: 100%;
+  border-style: none;
+  padding: 5%;
+  text-align: left;
+}
+.message-row {
+  margin: 0%;
+  display: inline-block;
+}
+
+.btn-flat {
+  margin-right: 5%;
+  margin-left: 5%;
+  border-radius: 15px;
+  height: 80px;
+}
+
+.border-green {
+  min-width: 20%;
+  float: right;
+  border: 0.5px solid green;
+}
+
+.border-red {
+  min-width: 20%;
+  float: left;
+  border: 0.5px solid red;
+}
+.messenger {
+  padding: 0px;
+  margin: 0px;
+  font-size: 10px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+.invites {
+  margin: 1% 2%;
+  padding: 2% 5%;
+  border: none;
+  background-color: ghostwhite;
+}
+.date {
+  display: inline-block;
+  margin: 2% 5%;
+  padding: 1%;
+  border-radius: 25px;
+  border: 2px solid green;
+}
+.search-row {
+  width: 360px;
+  background-color: white;
+}
+.search {
+  background-color: white;
+  color: black;
+  width: 500px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  max-height: 100%;
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 800px; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto; /* 15% from the top and centered */
+  padding: 15%;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 25px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.open-modal {
+  display: block;
+}
+
+.close-modal {
+  display: none;
+}
