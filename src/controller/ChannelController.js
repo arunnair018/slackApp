@@ -21,16 +21,35 @@ module.exports.create = (req, res) => {
   });
 };
 
-module.exports.list = (req, res) => {
+module.exports.list = async (req, res) => {
   let user = req.user._id;
-  Channel.find(
-    { invites: { $in: [mongoose.Types.ObjectId(user)] } },
-    (err, channels) => {
-      if (err) {
-        res.json(err);
-      } else {
-        res.json(channels);
-      }
-    }
-  );
+  let channel = await Channel.aggregate([
+    { $match: { invites: { $in: [mongoose.Types.ObjectId(user)] } } },
+    {
+      $project: {
+        _id: 1,
+        name: 1,
+        invites: 1,
+      },
+    },
+    {
+      $lookup: {
+        from: "messages",
+        localField: "_id",
+        foreignField: "channel",
+        as: "posts",
+      },
+    },
+    { $unwind: { path: "$posts", preserveNullAndEmptyArrays: true } },
+    {
+      $group: {
+        _id: "$_id",
+        channelname: { $first: "$name" },
+        count: { $sum: 1 },
+      },
+    },
+    { $sort: { count: -1 } },
+  ]);
+  console.log(channel);
+  res.json(channel);
 };

@@ -90,7 +90,7 @@ class Nav extends Component {
           </nav>
         </div>
         <div>
-          <div id='myModal' class={`modal ${this.state.modal}`}>
+          <div id='myModal' className={`modal ${this.state.modal}`}>
             <div className='modal-content'>
               <span className='close' onClick={this.closeModal}>
                 &times;

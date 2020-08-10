@@ -18,12 +18,13 @@ class Channel extends Component {
     }
     return (
       <main>
-        
         <div className='header-channel'>
           <span style={{ fontSize: "25px" }}>Channels</span>
           <button
             type='button'
-            onClick={()=>{this.props.setscope("modal")}}
+            onClick={() => {
+              this.props.setscope("modal");
+            }}
             className='btn right'
           >
             +
@@ -33,11 +34,14 @@ class Channel extends Component {
         <div className='channel-list'>
           {this.props.channels.map((item) => {
             return (
-              <button 
-              className='channel-button waves-effect' 
-              key={item._id} 
-              onClick={(e)=>{this.props.setscope(item._id)}}>
-                {item.name}
+              <button
+                className='channel-button waves-effect'
+                key={item._id}
+                onClick={(e) => {
+                  this.props.setscope(item._id);
+                }}
+              >
+                {item.channelname}
               </button>
             );
           })}
