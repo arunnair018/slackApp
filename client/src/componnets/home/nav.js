@@ -1,6 +1,7 @@
 import React, { useState, Component } from "react";
 import cookie from "js-cookie";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
   state = {
@@ -74,10 +75,10 @@ class Nav extends Component {
                   </form>
                 </li>
                 <li>
-                  <a href='/'>Home</a>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li>
-                  <a href='/dashboard'>Dashboard</a>
+                  <Link to='/dashboard'>Dashboard</Link>
                 </li>
                 <li>
                   <a href='#' onClick={this.logout}>
