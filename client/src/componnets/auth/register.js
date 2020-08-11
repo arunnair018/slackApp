@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import cookie from "js-cookie";
-import { Redirect } from "react-router-dom";
 
 class Register extends Component {
   state = {
@@ -37,7 +35,6 @@ class Register extends Component {
         this.props.login("1");
       })
       .catch((err) => {
-        console.log(err);
         // API call not succeed set error to display
         this.setState({ errors: "error submitting" });
       });

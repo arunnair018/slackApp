@@ -30,12 +30,12 @@ class Auth extends Component {
             </a>
             <ul className='nav-ul right' id='nav-mobile'>
               <li className='nav-li'>
-                <a href='#' id='1' onClick={this.changeScope}>
+                <a href='/#' id='1' onClick={this.changeScope}>
                   Login
                 </a>
               </li>
               <li className='nav-li'>
-                <a href='#' id='0' onClick={this.changeScope}>
+                <a href='/#' id='0' onClick={this.changeScope}>
                   Register
                 </a>
               </li>

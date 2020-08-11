@@ -48,7 +48,6 @@ class Login extends Component {
         } else {
           this.setState({ errors: res.response.data });
         }
-        console.log(this.state);
       });
   };
 

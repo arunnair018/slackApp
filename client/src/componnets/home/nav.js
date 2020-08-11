@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import cookie from "js-cookie";
 import Axios from "axios";
 import { Link } from "react-router-dom";
@@ -67,7 +67,7 @@ class Nav extends Component {
                         />
                       </div>
                       <div className='input-field col s4'>
-                        <a className='btn' onClick={this.searchpost}>
+                        <a href="/#" className='btn' onClick={this.searchpost}>
                           Search
                         </a>
                       </div>
@@ -81,7 +81,7 @@ class Nav extends Component {
                   <Link to='/dashboard'>Dashboard</Link>
                 </li>
                 <li>
-                  <a href='#' onClick={this.logout}>
+                  <a href='/#' onClick={this.logout}>
                     Logout
                   </a>
                 </li>

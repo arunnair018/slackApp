@@ -23,7 +23,6 @@ class Message extends Component {
         },
       })
         .then((res) => {
-          console.log(res);
           this.setState({
             message: res.data.reverse(),
             load: true,
@@ -76,7 +75,6 @@ class Message extends Component {
     })
       .then((res) => {
         this.setState({ load: true });
-        console.log(this.state.message);
       })
       .catch((err) => {
         console.log(err);
@@ -84,7 +82,6 @@ class Message extends Component {
   };
 
   render() {
-    console.log(this.props.scope);
     if (!this.state.load) {
       return <center>"Select a channel to display messages"</center>;
     }

@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const Message = mongoose.model("Message");
 
 module.exports.create = (req, res) => {
-  console.log(req.body)
   let data = {
     user: req.user._id,
     username:req.user.username,
@@ -27,7 +26,6 @@ module.exports.list = (req, res) => {
     if (err) {
       res.json(err);
     } else {
-      console.log(messages)
       res.json(messages);
     }
   });

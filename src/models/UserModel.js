@@ -63,7 +63,6 @@ userSchema.statics.findByCredentials = async (email, password, region) => {
     email: email,
     region: regiond,
   });
-  console.log(email, password, regiond);
   if (!user) {
     return {
       error: "Invalid login credentials",

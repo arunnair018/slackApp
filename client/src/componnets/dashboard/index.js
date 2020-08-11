@@ -22,7 +22,6 @@ class Dashboard extends Component {
     if (data.d1.toString() === data.d2.toString()) {
       data.d1 = new Date(Date.parse("2020-01-01T00:00:00.000Z"));
     }
-    console.log(data);
     Axios.post("/metrics", data)
       .then((res) => {
         this.setState({
@@ -72,7 +71,7 @@ class Dashboard extends Component {
               />
             </span>
           </div>
-          <a className='waves-effect waves-light btn' onClick={this.fetchData}>
+          <a href="/#" className='waves-effect waves-light btn' onClick={this.fetchData}>
             Update
           </a>
         </center>

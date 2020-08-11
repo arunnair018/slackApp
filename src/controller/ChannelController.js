@@ -50,6 +50,5 @@ module.exports.list = async (req, res) => {
     },
     { $sort: { count: -1 } },
   ]);
-  console.log(channel);
   res.json(channel);
 };

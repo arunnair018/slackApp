@@ -6,7 +6,6 @@ const User = mongoose.model("User");
 const Channel = mongoose.model("Channel");
 
 module.exports.metric = async (req, res) => {
-  console.log(req.body);
   let d1 = new Date(Date.parse(req.body.d1));
   let d2 = new Date(Date.parse(req.body.d2));
 
@@ -17,7 +16,7 @@ module.exports.metric = async (req, res) => {
     },
   };
 
-  console.log(dateRange);
+
   const topUser = await Message.aggregate([
     {
       $match: dateRange,
@@ -105,7 +104,6 @@ module.exports.search = (req, res) => {
       if (err) {
         res.json({ err });
       }
-      console.log(msg);
       res.json(msg);
     }
   );
